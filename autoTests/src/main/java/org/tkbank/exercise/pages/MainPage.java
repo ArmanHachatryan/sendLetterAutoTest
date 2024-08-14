@@ -22,7 +22,7 @@ public class MainPage extends BasePage{
 
     public MainPage() {
         driver.get(Constant.GMAIL_RU);
-        PageFactory.initElements(driver, this); //инициализация всех элементов на странице
+        PageFactory.initElements(driver, this);
     }
 
     public MainPage writeMessage(String recipient, String message) {
@@ -31,7 +31,7 @@ public class MainPage extends BasePage{
         recipientField.sendKeys(recipient);
         textField.click();
         textField.sendKeys(message);
-        //sendButton.click();
+        sendButton.click();
         return this;
     }
 }
